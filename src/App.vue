@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class = "header">
+      <Index msg="BEER-SEARCHER"/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Index from './components/index.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Index
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+}
+.header{
+  background-image: url('./assets/beerbackground.jpeg');
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent
+}
+
+h1{
+  font-size: 80px;
+}
+button:hover{
+  box-shadow: 2px 2px rgba(0,0,0,0.4);
+  cursor:pointer;
 }
 </style>
