@@ -67,12 +67,6 @@ h3{
   font-size:16px;
   font-weight: bold;
 }
-p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color:black;
-    font-weight: normal;
-}
 .smaller{
     font-size: 12px;
     font-weight: normal;
@@ -80,24 +74,12 @@ p{
 
 #details{
   margin-bottom: 5px;
-  height: 24px;
-  border-radius: 5px;
-  border:none;
-  background-color:antiquewhite;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 14px;
 }
 #close{
   position: absolute;
   top: 0;
   right: 0;
-  height: 24px;
   width: 24px;
-  border-radius: 5px;
-  border:none;
-  background-color:antiquewhite;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 14px;
   font-weight: bold;
 }
 </style>

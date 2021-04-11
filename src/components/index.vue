@@ -4,8 +4,8 @@
       <div class="search-input">
         <input v-on:keypress.enter="searchbeer()" v-model="search" type="text" placeholder="Search Beer">
         <a href="#" class="searchbar-clear"></a>
-        <button @click="searchbeer()">Search</button>
-        <button @click="clearsearch()">Clear</button>
+        <button class="searchclear" @click="searchbeer()">Search</button>
+        <button class="searchclear" @click="clearsearch()">Clear</button>
       </div>
       <div class="nobeer">
         <div v-if = "nobeer">
@@ -64,7 +64,7 @@ export default {
       axios.get('https://api.punkapi.com/v2/beers')
           this.beers = []
           this.search = ''
-          this.nobeer = true
+          this.nobeer = false
     }
   }
 }
@@ -76,17 +76,11 @@ input{
   width: 300px;
 }
 .nobeer{
+  font-weight:bold;
   color: black;
 }
-button{
-  cursor:pointer;
+.searchclear{
   margin-right:2px;
-  height: 24px;
-  border-radius: 5px;
-  border:none;
-  background-color:antiquewhite;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 14px;
 }
 .divgrid{
   justify-content: center;

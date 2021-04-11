@@ -38,6 +38,20 @@ export default {
 h1{
   font-size: 80px;
 }
+p{
+  font-size:14px;
+  color:black;
+  font-weight: normal;
+}
+button{
+  cursor:pointer;
+  height: 24px;
+  background-color:antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  border:none;
+  border-radius:5px;
+}
 button:hover{
   box-shadow: 2px 2px rgba(0,0,0,0.4);
   cursor:pointer;
