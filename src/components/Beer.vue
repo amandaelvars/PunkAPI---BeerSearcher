@@ -10,10 +10,10 @@
 		<dialog v-if="isClicked" open>
       <button id="close" @click="closetab()">x</button>
       <div v-if="this.beerData.image_url != null">
-        <img :src="`${beerData.image_url}`" alt="Image of beer" style="max-height: 400px; max-width: 400px;" />
+        <img :src="`${beerData.image_url}`" alt="Image of Beer" style="max-height: 400px; max-width: 400px;" />
       </div>
       <div v-if="this.beerData.image_url === null">
-        <img src = '../assets/brew-dog-logo.png' alt = "placeholder for bbeer image" style="max-height: 400px; max-width: 400px; margin-top: 5px;"/>
+        <img src = '../assets/brew-dog-logo.png' alt = "BrewDog logo" style="max-height: 400px; max-width: 400px; margin-top: 5px;"/>
       </div> 
       <br>
       <b>{{beerData.name}}</b><br><br>
