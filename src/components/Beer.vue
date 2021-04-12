@@ -1,15 +1,21 @@
 <template>
-  <div class="main" @click="clickedbeer()">
-    <img :src="`${beerData.image_url}`" alt="`image of beer" style="max-height: 200px; max-width: 200px; margin-top: 5px;" />
-    <p class="smaller" v-if="this.beerData.image_url === null">
-        No Image
-    </p>
+  <div class="main">
+  <img :src="`${beerData.image_url}`" alt="" style="max-height: 200px; max-width: 200px; margin-top: 5px;" />
+    <div v-if="this.beerData.image_url === null">
+        <img src = '../assets/brew-dog-logo.png' alt = "placeholder for bbeer image" style="max-height: 200px; max-width: 200px; margin-top: 5px;"/>
+    </div> 
     <h3 id="beername">{{ beerData.name }}</h3>
     <p class="smaller">{{beerData.abv}}%</p>
     <button id="details" @click="handleDetails()">Details</button>
 		<dialog v-if="isClicked" open>
       <button id="close" @click="closetab()">x</button>
-      <img :src="`${beerData.image_url}`" alt="`image of beer" style="max-height: 400px; max-width: 400px;" /><br>
+      <div v-if="this.beerData.image_url != null">
+        <img :src="`${beerData.image_url}`" alt="Image of beer" style="max-height: 400px; max-width: 400px;" />
+      </div>
+      <div v-if="this.beerData.image_url === null">
+        <img src = '../assets/brew-dog-logo.png' alt = "placeholder for bbeer image" style="max-height: 400px; max-width: 400px; margin-top: 5px;"/>
+      </div> 
+      <br>
       <b>{{beerData.name}}</b><br><br>
       <b>Alcohol by Volume:</b>
       {{beerData.abv}}%<br><br>
@@ -28,21 +34,19 @@ export default {
   },
   data() {
     return {
-        isClicked : false
+        isClicked : false,
     };
   },
 
   methods: {
-      clickedbeer(){
-          console.log(this.beerData.name + " was clicked!");
-      },
       handleDetails(){
         this.isClicked = !this.isClicked
       },
       closetab(){
         this.isClicked = false;
-      }
+      },
   },
+
 };
 </script>
 <style scoped>
